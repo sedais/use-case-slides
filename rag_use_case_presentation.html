@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Solution Presentation - Machine Learning Reply</title>
+    <title>RAG System - Use Case Presentation | Machine Learning Reply</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -479,9 +479,9 @@
             <div class="chapter-item active" data-chapter="0">Understanding</div>
             <div class="chapter-item" data-chapter="1">Problem Analysis</div>
             <div class="chapter-item" data-chapter="2">Approach</div>
-            <div class="chapter-item" data-chapter="3">Solution Architecture</div>
+            <div class="chapter-item" data-chapter="3">RAG Architecture</div>
             <div class="chapter-item" data-chapter="4">Data Strategy</div>
-            <div class="chapter-item" data-chapter="5">ML Pipeline</div>
+            <div class="chapter-item" data-chapter="5">RAG Pipeline</div>
             <div class="chapter-item" data-chapter="6">Implementation</div>
             <div class="chapter-item" data-chapter="7">Metrics & KPIs</div>
             <div class="chapter-item" data-chapter="8">Risks & Mitigation</div>
@@ -491,26 +491,26 @@
         <div class="slide-container">
             <div class="slide active" data-chapter="0">
                 <div class="section-header">Use Case Understanding</div>
-                <div class="slide-title">Problem <span class="slide-title-accent">Statement</span></div>
-                <div class="big-text">[Edit: Insert specific problem statement]</div>
-                <div class="medium-text">Stakeholders: [Edit: Add stakeholders]</div>
+                <div class="slide-title">Intelligent <span class="slide-title-accent">Knowledge Assistant</span></div>
+                <div class="big-text">RAG-powered Q&A system grounded in enterprise knowledge</div>
+                <div class="medium-text">Stakeholders: Product, Engineering, Customer Support, Knowledge Management</div>
             </div>
 
             <div class="slide" data-chapter="1">
                 <div class="section-header">Problem Analysis</div>
-                <div class="slide-title">Current <span class="slide-title-accent">State</span></div>
+                <div class="slide-title">Current <span class="slide-title-accent">Challenges</span></div>
                 <div class="visual-grid">
                     <div class="visual-card">
-                        <div class="card-title">Pain Point 1</div>
-                        <div class="card-description">[Edit: Challenge]</div>
+                        <div class="card-title">Knowledge Silos</div>
+                        <div class="card-description">Critical information scattered across Confluence, SharePoint, PDFs, and Slack &mdash; employees spend excessive time searching</div>
                     </div>
                     <div class="visual-card">
-                        <div class="card-title">Pain Point 2</div>
-                        <div class="card-description">[Edit: Challenge]</div>
+                        <div class="card-title">LLM Hallucinations</div>
+                        <div class="card-description">Generic LLMs fabricate answers when asked about internal processes, policies, or domain-specific topics</div>
                     </div>
                     <div class="visual-card">
-                        <div class="card-title">Pain Point 3</div>
-                        <div class="card-description">[Edit: Challenge]</div>
+                        <div class="card-title">Stale Responses</div>
+                        <div class="card-description">Fine-tuned models become outdated quickly as documentation and processes evolve</div>
                     </div>
                 </div>
             </div>
@@ -520,67 +520,76 @@
                 <div class="slide-title">What's at <span class="slide-title-accent">Stake?</span></div>
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-value">[#]</div>
-                        <div class="metric-label">Current Loss</div>
+                        <div class="metric-value">30%</div>
+                        <div class="metric-label">Time Lost Searching</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">[#]</div>
-                        <div class="metric-label">Affected Users</div>
+                        <div class="metric-value">5k+</div>
+                        <div class="metric-label">Support Tickets / Month</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">[#]</div>
-                        <div class="metric-label">Time Impact</div>
+                        <div class="metric-value">48h</div>
+                        <div class="metric-label">Avg. Resolution Time</div>
                     </div>
                 </div>
             </div>
 
             <div class="slide" data-chapter="2">
                 <div class="section-header">Strategic Approach</div>
-                <div class="slide-title">Solution <span class="slide-title-accent">Philosophy</span></div>
+                <div class="slide-title">Why RAG over <span class="slide-title-accent">Fine-Tuning?</span></div>
                 <div class="bullet-list">
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Principle 1]</div>
+                        <div><strong>Real-time knowledge</strong> &mdash; No retraining needed when documents change</div>
                     </div>
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Principle 2]</div>
+                        <div><strong>Traceability</strong> &mdash; Every answer is linked to source documents for verification</div>
                     </div>
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Principle 3]</div>
+                        <div><strong>Cost-effective</strong> &mdash; No expensive GPU training; leverage existing LLM APIs</div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">•</div>
+                        <div><strong>Data privacy</strong> &mdash; Documents stay in your infrastructure, only queries hit the LLM</div>
                     </div>
                 </div>
             </div>
 
             <div class="slide" data-chapter="2">
-                <div class="section-header">ML Problem Framing</div>
-                <div class="slide-title">Problem <span class="slide-title-accent">Type</span></div>
+                <div class="section-header">Problem Framing</div>
+                <div class="slide-title">System <span class="slide-title-accent">Type</span></div>
                 <div class="highlight-box">
-                    <div class="big-text">[Edit: Classification/Regression/etc.]</div>
+                    <div class="big-text">Retrieval-Augmented Generation</div>
                     <div class="medium-text" style="margin-top: 30px;">
-                        Objective: [Edit: ML objective]
+                        Objective: Deliver accurate, grounded, and cited answers from enterprise knowledge bases in real-time
                     </div>
                 </div>
             </div>
 
             <div class="slide" data-chapter="3">
-                <div class="section-header">Solution Architecture</div>
-                <div class="slide-title">High-Level <span class="slide-title-accent">Design</span></div>
+                <div class="section-header">RAG Architecture</div>
+                <div class="slide-title">End-to-End <span class="slide-title-accent">Pipeline</span></div>
                 <div class="architecture-diagram">
                     <div class="arch-box">
-                        <div class="arch-title">Data Layer</div>
-                        <div class="arch-details">[Edit: Sources]</div>
+                        <div class="arch-title">Ingestion</div>
+                        <div class="arch-details">Document loaders<br>Chunking<br>Metadata extraction</div>
                     </div>
                     <div class="arch-arrow">→</div>
                     <div class="arch-box">
-                        <div class="arch-title">ML Layer</div>
-                        <div class="arch-details">[Edit: Model]</div>
+                        <div class="arch-title">Embedding</div>
+                        <div class="arch-details">Text embeddings<br>Vector store<br>Index management</div>
                     </div>
                     <div class="arch-arrow">→</div>
                     <div class="arch-box">
-                        <div class="arch-title">Serving</div>
-                        <div class="arch-details">[Edit: API]</div>
+                        <div class="arch-title">Retrieval</div>
+                        <div class="arch-details">Semantic search<br>Hybrid search<br>Re-ranking</div>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-box">
+                        <div class="arch-title">Generation</div>
+                        <div class="arch-details">Prompt assembly<br>LLM inference<br>Citation linking</div>
                     </div>
                 </div>
             </div>
@@ -590,44 +599,54 @@
                 <div class="slide-title">Proposed <span class="slide-title-accent">Technologies</span></div>
                 <div class="tech-stack">
                     <div class="tech-badge">Python</div>
-                    <div class="tech-badge">TensorFlow</div>
-                    <div class="tech-badge">Kubernetes</div>
-                    <div class="tech-badge">AWS/Azure</div>
-                    <div class="tech-badge">MLflow</div>
+                    <div class="tech-badge">LangChain</div>
+                    <div class="tech-badge">OpenAI / Azure OpenAI</div>
+                    <div class="tech-badge">Qdrant / Weaviate</div>
+                    <div class="tech-badge">FastAPI</div>
+                    <div class="tech-badge">Docker / K8s</div>
                     <div class="tech-badge">PostgreSQL</div>
+                    <div class="tech-badge">Redis</div>
                 </div>
                 <div class="small-text" style="margin-top: 40px;">
-                    <strong>Rationale:</strong> [Edit: Why these]
+                    <strong>Rationale:</strong> Production-proven stack with strong community support, modular design for swapping LLM providers or vector stores as needs evolve
                 </div>
             </div>
 
             <div class="slide" data-chapter="4">
                 <div class="section-header">Data Strategy</div>
-                <div class="slide-title">Data <span class="slide-title-accent">Requirements</span></div>
+                <div class="slide-title">Knowledge <span class="slide-title-accent">Sources</span></div>
                 <div class="two-column">
                     <div>
-                        <div class="card-title" style="margin-bottom: 25px; color: #35c733;">Sources</div>
+                        <div class="card-title" style="margin-bottom: 25px; color: #35c733;">Document Sources</div>
                         <div class="bullet-list">
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Source 1]</div>
+                                <div>Confluence / SharePoint wikis</div>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Source 2]</div>
+                                <div>PDF manuals & technical docs</div>
+                            </div>
+                            <div class="bullet-item">
+                                <div class="bullet-icon">•</div>
+                                <div>FAQ databases & ticketing systems</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="card-title" style="margin-bottom: 25px; color: #35c733;">Quality</div>
+                        <div class="card-title" style="margin-bottom: 25px; color: #35c733;">Data Governance</div>
                         <div class="bullet-list">
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Validation]</div>
+                                <div>Access control & role-based filtering</div>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: DSGVO]</div>
+                                <div>GDPR / DSGVO compliant processing</div>
+                            </div>
+                            <div class="bullet-item">
+                                <div class="bullet-icon">•</div>
+                                <div>PII detection & redaction pipeline</div>
                             </div>
                         </div>
                     </div>
@@ -635,86 +654,89 @@
             </div>
 
             <div class="slide" data-chapter="4">
-                <div class="section-header">Feature Engineering</div>
-                <div class="slide-title">Key <span class="slide-title-accent">Features</span></div>
+                <div class="section-header">Chunking & Embeddings</div>
+                <div class="slide-title">Document <span class="slide-title-accent">Processing</span></div>
                 <div class="visual-grid">
                     <div class="visual-card">
-                        <div class="card-title">Feature Set 1</div>
-                        <div class="card-description">[Edit: Features]</div>
+                        <div class="card-title">Smart Chunking</div>
+                        <div class="card-description">Recursive text splitting with overlap, respecting paragraph and section boundaries for coherent context windows</div>
                     </div>
                     <div class="visual-card">
-                        <div class="card-title">Feature Set 2</div>
-                        <div class="card-description">[Edit: Features]</div>
+                        <div class="card-title">Embedding Model</div>
+                        <div class="card-description">Dense vector embeddings (e.g. text-embedding-3-large or open-source alternatives) for semantic similarity</div>
                     </div>
                     <div class="visual-card">
-                        <div class="card-title">Feature Set 3</div>
-                        <div class="card-description">[Edit: Features]</div>
+                        <div class="card-title">Metadata Enrichment</div>
+                        <div class="card-description">Attach source URL, document title, last-updated timestamp, and access permissions to every chunk</div>
                     </div>
                 </div>
             </div>
 
             <div class="slide" data-chapter="5">
-                <div class="section-header">ML Pipeline</div>
-                <div class="slide-title">Model <span class="slide-title-accent">Development</span></div>
+                <div class="section-header">RAG Pipeline</div>
+                <div class="slide-title">Retrieval <span class="slide-title-accent">Strategy</span></div>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker">1</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Data Prep</div>
-                            <div class="timeline-description">[Edit: Steps]</div>
+                            <div class="timeline-title">Query Understanding</div>
+                            <div class="timeline-description">Rewrite & expand user query using an LLM to improve retrieval recall. Generate hypothetical document embeddings (HyDE) for better semantic matching.</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">2</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Training</div>
-                            <div class="timeline-description">[Edit: Approach]</div>
+                            <div class="timeline-title">Hybrid Search</div>
+                            <div class="timeline-description">Combine dense vector search (semantic) with sparse BM25 keyword search. Reciprocal Rank Fusion merges both result sets for best coverage.</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">3</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Validation</div>
-                            <div class="timeline-description">[Edit: Strategy]</div>
+                            <div class="timeline-title">Re-Ranking</div>
+                            <div class="timeline-description">Cross-encoder re-ranker scores top-K results for fine-grained relevance. Filter by metadata (recency, access level) before passing to the LLM.</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="slide" data-chapter="5">
-                <div class="section-header">Model Selection</div>
-                <div class="slide-title">Proposed <span class="slide-title-accent">Model</span></div>
+                <div class="section-header">Generation Layer</div>
+                <div class="slide-title">Prompt <span class="slide-title-accent">Engineering</span></div>
                 <div class="highlight-box">
-                    <div class="big-text">[Edit: Model type]</div>
+                    <div class="big-text">Context-Grounded Generation</div>
                     <div class="medium-text" style="margin-top: 30px;">
-                        <strong>Why:</strong> [Edit: Justification]
+                        System prompt enforces: answer only from provided context, cite sources inline, and explicitly state when information is not found
                     </div>
+                </div>
+                <div class="small-text" style="margin-top: 20px;">
+                    Guardrails include token budget management, hallucination detection via NLI models, and automatic fallback to "I don't know" when retrieval confidence is low.
                 </div>
             </div>
 
             <div class="slide" data-chapter="6">
                 <div class="section-header">Implementation</div>
-                <div class="slide-title">Phased <span class="slide-title-accent">Approach</span></div>
+                <div class="slide-title">Phased <span class="slide-title-accent">Rollout</span></div>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker">P1</div>
                         <div class="timeline-content">
                             <div class="timeline-title">MVP (Weeks 1-4)</div>
-                            <div class="timeline-description">[Edit: Deliverables]</div>
+                            <div class="timeline-description">Basic ingestion pipeline, single vector store, simple retrieval + generation chain. Internal demo with one document source.</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">P2</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Enhancement (5-8)</div>
-                            <div class="timeline-description">[Edit: Deliverables]</div>
+                            <div class="timeline-title">Enhancement (Weeks 5-8)</div>
+                            <div class="timeline-description">Hybrid search, re-ranking, metadata filtering, multi-source ingestion, evaluation framework, and feedback loop integration.</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">P3</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Scale (9-12)</div>
-                            <div class="timeline-description">[Edit: Deliverables]</div>
+                            <div class="timeline-title">Production (Weeks 9-12)</div>
+                            <div class="timeline-description">User authentication & RBAC, CI/CD for document pipelines, monitoring dashboards, caching layer, and load testing.</div>
                         </div>
                     </div>
                 </div>
@@ -726,15 +748,15 @@
                 <div class="visual-grid">
                     <div class="visual-card">
                         <div class="card-title">Team</div>
-                        <div class="card-description">[Edit: Roles]</div>
+                        <div class="card-description">1 ML Engineer (RAG pipeline)<br>1 Backend Engineer (API & infra)<br>1 Data Engineer (ingestion)<br>0.5 PM (coordination)</div>
                     </div>
                     <div class="visual-card">
                         <div class="card-title">Infrastructure</div>
-                        <div class="card-description">[Edit: Resources]</div>
+                        <div class="card-description">Cloud GPU for embedding (batch)<br>Vector DB cluster (Qdrant/Weaviate)<br>LLM API (Azure OpenAI)<br>Redis for query caching</div>
                     </div>
                     <div class="visual-card">
                         <div class="card-title">Dependencies</div>
-                        <div class="card-description">[Edit: Requirements]</div>
+                        <div class="card-description">Access to document repositories<br>LLM API budget approval<br>Security review for data flow<br>Stakeholder feedback group</div>
                     </div>
                 </div>
             </div>
@@ -744,20 +766,20 @@
                 <div class="slide-title">Measuring <span class="slide-title-accent">Success</span></div>
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-value">[#]%</div>
-                        <div class="metric-label">Accuracy</div>
+                        <div class="metric-value">>85%</div>
+                        <div class="metric-label">Answer Accuracy</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">[#]ms</div>
-                        <div class="metric-label">Latency</div>
+                        <div class="metric-value">&lt;3s</div>
+                        <div class="metric-label">Response Latency</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">[#]%</div>
-                        <div class="metric-label">KPI Lift</div>
+                        <div class="metric-value">>90%</div>
+                        <div class="metric-label">Retrieval Recall@10</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">[#]</div>
-                        <div class="metric-label">User Score</div>
+                        <div class="metric-value">&lt;5%</div>
+                        <div class="metric-label">Hallucination Rate</div>
                     </div>
                 </div>
             </div>
@@ -771,11 +793,11 @@
                         <div class="bullet-list">
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Financial]</div>
+                                <div>40% reduction in support ticket volume</div>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Efficiency]</div>
+                                <div>60% faster time-to-answer for employees</div>
                             </div>
                         </div>
                     </div>
@@ -784,11 +806,11 @@
                         <div class="bullet-list">
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Experience]</div>
+                                <div>Single source of truth across the organization</div>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon">•</div>
-                                <div>[Edit: Innovation]</div>
+                                <div>Improved onboarding experience for new hires</div>
                             </div>
                         </div>
                     </div>
@@ -800,20 +822,20 @@
                 <div class="slide-title">Potential <span class="slide-title-accent">Challenges</span></div>
                 <div class="risk-grid">
                     <div class="risk-item risk-high">
-                        <div class="risk-title">High Risk</div>
-                        <div class="risk-description">[Edit: Risk]</div>
+                        <div class="risk-title">Hallucination Risk</div>
+                        <div class="risk-description">LLM generates plausible but incorrect answers when retrieved context is insufficient or ambiguous</div>
                     </div>
                     <div class="risk-item risk-high">
-                        <div class="risk-title">High Risk</div>
-                        <div class="risk-description">[Edit: Risk]</div>
+                        <div class="risk-title">Data Freshness</div>
+                        <div class="risk-description">Stale embeddings from outdated documents lead to incorrect answers if ingestion pipeline lags behind updates</div>
                     </div>
                     <div class="risk-item risk-medium">
-                        <div class="risk-title">Medium</div>
-                        <div class="risk-description">[Edit: Risk]</div>
+                        <div class="risk-title">Retrieval Quality</div>
+                        <div class="risk-description">Poor chunking or embedding choices may return irrelevant context, degrading generation quality</div>
                     </div>
                     <div class="risk-item risk-low">
-                        <div class="risk-title">Low Risk</div>
-                        <div class="risk-description">[Edit: Risk]</div>
+                        <div class="risk-title">Cost Overrun</div>
+                        <div class="risk-description">High query volume could increase LLM API costs; mitigated by caching and smart routing</div>
                     </div>
                 </div>
             </div>
@@ -824,15 +846,19 @@
                 <div class="bullet-list">
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Mitigation 1]</div>
+                        <div><strong>Confidence scoring</strong> &mdash; Only surface answers above a retrieval relevance threshold; otherwise respond with "I don't have enough information"</div>
                     </div>
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Mitigation 2]</div>
+                        <div><strong>Incremental ingestion</strong> &mdash; Event-driven document sync with change detection to keep the vector store up-to-date in near real-time</div>
                     </div>
                     <div class="bullet-item">
                         <div class="bullet-icon">•</div>
-                        <div>[Edit: Mitigation 3]</div>
+                        <div><strong>Human-in-the-loop</strong> &mdash; Thumbs up/down feedback on answers feeds into an evaluation pipeline for continuous improvement</div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">•</div>
+                        <div><strong>Cost controls</strong> &mdash; Semantic caching of frequent queries, tiered model routing (small model for simple questions, large for complex)</div>
                     </div>
                 </div>
             </div>
@@ -844,22 +870,22 @@
                     <div class="timeline-item">
                         <div class="timeline-marker">1</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Week 1</div>
-                            <div class="timeline-description">[Edit: Actions]</div>
+                            <div class="timeline-title">Week 1: Discovery</div>
+                            <div class="timeline-description">Audit available document sources, define access permissions, select pilot use case and user group</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">2</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Weeks 2-3</div>
-                            <div class="timeline-description">[Edit: Actions]</div>
+                            <div class="timeline-title">Weeks 2-3: Prototype</div>
+                            <div class="timeline-description">Build ingestion pipeline for primary source, deploy vector store, wire up basic RAG chain with evaluation dataset</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">3</div>
                         <div class="timeline-content">
-                            <div class="timeline-title">Month 1</div>
-                            <div class="timeline-description">[Edit: Milestone]</div>
+                            <div class="timeline-title">Week 4: Demo & Feedback</div>
+                            <div class="timeline-description">Present working MVP to stakeholders, collect feedback, define success criteria for Phase 2</div>
                         </div>
                     </div>
                 </div>
